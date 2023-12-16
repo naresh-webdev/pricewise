@@ -27,8 +27,13 @@ export async function scrapeAmazonProduct(url: string) {
 
     // Extract the product title
     const title = $("#productTitle").text().trim();
-    const currentPrice = extractPrice();
-    console.log(title);
+    let currentPrice = extractPrice(
+      $(".a-price-whole:first")
+      // $(".priceTopay span.a-price-whole"),
+      // $("a.size.base.a-color-price"),
+      // $(".a-button-selected .a-color-base")
+    );
+    console.log({ title, currentPrice });
   } catch (error: any) {
     throw new Error(`Faled to scrape product : ${error.message}`);
   }
