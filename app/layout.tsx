@@ -13,6 +13,12 @@ export const metadata: Metadata = {
   title: "Pricewise",
   description:
     "Track product prices effortlessly and save money on your online shopping",
+  icons: {
+    other: {
+      rel: "script",
+      url: "https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js",
+    },
+  },
 };
 
 export default function RootLayout({
